@@ -19,7 +19,7 @@ jobs:
         run: echo "Deployment approved"
   greet:
     runs-on: ubuntu-latest
-
+    needs: [ approve ]
     steps:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
